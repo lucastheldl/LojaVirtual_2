@@ -1,0 +1,17 @@
+//fonts
+
+//variaveis
+@import "variaveis.scss";
+//components
+@import "header.scss";
+@import "banners.scss";
+@import "produtos.scss";
+@import "footer.scss";
+//bootstrap
+@import "bootstrap.min.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
