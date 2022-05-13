@@ -1,4 +1,48 @@
 footer {
   background: $cinza;
-  padding: 25px;
+  padding: 10px 10px;
+
+  .nav {
+    .nav-item {
+      p {
+        color: $cor-secundaria;
+      }
+
+      svg {
+        fill: $cor-secundaria;
+        height: 20px;
+        width: 20px;
+        margin-bottom: 10px;
+      }
+
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .logo {
+      margin-right: 10px;
+    }
+
+    .btn-info {
+      background: $branco;
+      padding-top: 10px;
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .acces {
+      p {
+        text-align: end;
+        padding-right: 10px;
+      }
+    }
+
+    .socials-icons {
+      border-left: solid $cor-secundaria 2px;
+    }
+  }
 }

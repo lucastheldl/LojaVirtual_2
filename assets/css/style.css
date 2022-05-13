@@ -1,6 +1,6 @@
 @charset "UTF-8";
 header {
-  background: rgb(248, 0, 50);
+  background: #f80032;
   padding: 25px 0 5px;
 }
 header .logo {
@@ -20,26 +20,31 @@ header form button {
   right: 30px;
 }
 header a {
-  font-size: 10px;
-  padding: 10px 0px 0px;
+  font-size: 15px;
+  padding: 10px 5px 5px;
   color: #fff;
   text-decoration: none;
-  margin: 0 5px;
+  margin: 0 5px 0;
   overflow: hidden;
   text-justify: center;
   font-weight: bold;
   white-space: nowrap;
+  border-radius: 5px;
+}
+header a:hover {
+  background: #b60000;
+  color: #fff;
 }
 header article ul li {
   margin-right: 10px;
 }
 header article ul li svg {
   fill: #fff;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 header article ul li p {
-  font-size: 10px;
+  font-size: 15px;
   color: #fff;
   font-weight: bold;
   line-height: 100%;
@@ -51,7 +56,7 @@ header .nav-header svg {
   height: 13px;
 }
 header .search-ico svg {
-  fill: rgb(248, 0, 50);
+  fill: #f80032;
   margin-right: 10px;
 }
 
@@ -59,11 +64,11 @@ header .search-ico svg {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .nav-produtos .navMenu a {
-  font-size: 12px !important;
+  font-size: 15px !important;
   font-weight: bold;
 }
 .nav-produtos a {
-  font-size: 10px;
+  font-size: 15px;
   padding: 10px 0px;
   background: #fff;
   color: #666666;
@@ -71,10 +76,12 @@ header .search-ico svg {
   margin: 0 5px;
   overflow: hidden;
   text-justify: center;
+  border-bottom: solid #fff 3px;
   white-space: nowrap;
 }
 .nav-produtos a:hover {
-  color: rgb(248, 0, 50);
+  color: #f80032;
+  border-bottom: solid #f80032 3px;
 }
 
 main {
@@ -84,18 +91,60 @@ main {
 main .banner-duplo {
   margin-top: 20px;
 }
+main .banner-quad {
+  margin-top: 20px;
+}
+main .banner-final {
+  padding: 30px 0 0 0 !important;
+}
+main .carousel-control-prev {
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 50%;
+  left: -35px;
+  top: 140px;
+}
+main .carousel-control-prev:hover {
+  background-color: rgb(187, 187, 187);
+}
+main .carousel-control-next {
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 50%;
+  right: -35px;
+  top: 140px;
+}
+main .carousel-control-next:hover {
+  background-color: rgb(187, 187, 187);
+}
+main .carousel-control-next-icon {
+  background-image: url("../images/nextIco.png") !important;
+  width: 60px;
+  height: 60px;
+}
+main .carousel-control-prev-icon {
+  background-image: url("../images/prevtIco.png") !important;
+  width: 60px;
+  height: 60px;
+}
 
 .produtos {
   text-decoration: none;
   padding-top: 20px;
+  flex-shrink: 0;
 }
-.produtos .produtos-container {
-  padding: 10px;
-  background-color: #fff;
+.produtos .cash {
   border: 10px;
   border-radius: 5px;
   border-top: solid #EC0059 50px;
   position: relative;
+  min-width: 100px;
+}
+.produtos .produtos-container {
+  padding: 10px;
+  background-color: #fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 .produtos .produtos-container img {
@@ -113,12 +162,16 @@ main .banner-duplo {
   height: 20px;
   margin-right: 10px;
 }
-.produtos .produtos-container .produtos-itens strong {
+.produtos .produtos-container .produtos-itens p {
+  color: #666666;
+}
+.produtos .produtos-container .produtos-itens .produtos-preco-cash {
   color: black;
   font-size: 25px;
 }
-.produtos .produtos-container .produtos-itens p {
+.produtos .produtos-container .produtos-itens .produtos-preco {
   color: #666666;
+  font-size: 20px;
 }
 .produtos .produtos-container .produtos-itens .produtos-stars svg {
   margin-bottom: 10px;
@@ -127,9 +180,48 @@ main .banner-duplo {
 
 footer {
   background: rgb(187, 187, 187);
-  padding: 25px;
+  padding: 10px 10px;
+}
+footer .nav .nav-item p {
+  color: #666666;
+}
+footer .nav .nav-item svg {
+  fill: #666666;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 10px;
+}
+footer .nav a {
+  text-decoration: none;
+}
+footer .nav .logo {
+  margin-right: 10px;
+}
+footer .nav .btn-info {
+  background: #fff;
+  padding-top: 10px;
+}
+footer .nav .btn-info p {
+  text-align: center;
+}
+footer .nav .acces p {
+  text-align: end;
+  padding-right: 10px;
+}
+footer .nav .socials-icons {
+  border-left: solid #666666 2px;
 }
 
+@media (max-width: 425px) {
+  article ul {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 767px) {
+  article ul {
+    padding-top: 10px;
+  }
+}
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -12200,6 +12292,10 @@ fieldset:disabled .btn {
   margin: 0;
   padding: 0;
   text-decoration: none;
+}
+* h2 {
+  color: #666666;
+  padding: 50px 0 0 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

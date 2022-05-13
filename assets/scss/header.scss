@@ -28,15 +28,21 @@ header {
   }
 
   a {
-    font-size: 10px;
-    padding: 10px 0px 0px;
+    font-size: 15px;
+    padding: 10px 5px 5px;
     color: $branco;
     text-decoration: none;
-    margin: 0 5px;
+    margin: 0 5px 0;
     overflow: hidden;
     text-justify: center;
     font-weight: bold;
     white-space: nowrap;
+    border-radius: 5px;
+
+    &:hover {
+      background: $vermelhoEscuro;
+      color: $branco;
+    }
   }
 
   article {
@@ -46,12 +52,12 @@ header {
 
         svg {
           fill: $branco;
-          width: 20px;
-          height: 20px;
+          width: 30px;
+          height: 30px;
         }
 
         p {
-          font-size: 10px;
+          font-size: 15px;
           color: $branco;
           font-weight: bold;
           line-height: 100%;
@@ -83,13 +89,13 @@ header {
 
   .navMenu {
     a {
-      font-size: 12px !important;
+      font-size: 15px !important;
       font-weight: bold;
     }
   }
 
   a {
-    font-size: 10px;
+    font-size: 15px;
     padding: 10px 0px;
     background: $branco;
     color: $cor-secundaria;
@@ -97,12 +103,13 @@ header {
     margin: 0 5px;
     overflow: hidden;
     text-justify: center;
+    border-bottom: solid $branco 3px;
 
     white-space: nowrap;
 
     &:hover {
       color: $cor-primaria;
+      border-bottom: solid $cor-primaria 3px;
     }
   }
-
 }
